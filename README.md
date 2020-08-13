@@ -1,3 +1,32 @@
+Answer the following questions:
+- What changes did you make to your app? Why? 
+
+1. Changed AR associations to has_many grade_levels and has_many students through grade_levels / has_many teachers through grade_levels
+
+    - So the students and teachers would have a has-many-through relationship via grade_levels
+
+2. Added grade_level model and associations (belongs_to student and belongs_to teacher)
+
+    - 'cause we need to actually have the join table for this to work
+
+3. Added migration to remove grade_level column from both students and teachers tables
+
+    - It's no longer necessary, and it would be confusing to leave it there
+
+4. Added migration to create grade_levels table
+
+    - See explanation for #2
+    - I did the migrations in separate steps because otherwise the filename would be realllllllllllllly long (following the conventions described on learn.co)
+
+5. Added migration to remove teacher_id column from students table
+
+    - See explanation for #3, also it breaks the program to leave it there
+
+6. Updated seeds file to remove grade_level columns from teacher and student entries and add new GradeLevel instances.
+
+    - Need examples that match the new tables!
+
+
 Answer the following questions in the README:
 
 Which method(s) does Active Record create for you?
@@ -11,6 +40,11 @@ Which method(s) did you have to create yourself? Why?
 - Student.all_in_grade uses the AR-provided Student#grade_level but I implemented the logic to select all within the grade level.
 
 - Teacher#tenure uses the AR-provided Teacher#years_of_experience but I implemented the logic to check if it was > 5 and return true or false accordingly.
+
+# Deliverables part 3
+
+- A Student has many Teachers through GradeLevel
+- A Teacher has many Students through GradeLevel
 
 
 # Deliverables 1 part 2
