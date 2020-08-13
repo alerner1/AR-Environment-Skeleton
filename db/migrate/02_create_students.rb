@@ -4,7 +4,6 @@ class CreateStudents < ActiveRecord::Migration[6.0]
             t.string :first_name
             t.string :last_name
             t.string :grade_level
-            t.integer :teacher_id
         end
     end
 end
