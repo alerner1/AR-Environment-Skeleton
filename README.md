@@ -2,7 +2,7 @@ Answer the following questions in the README:
 
 Which method(s) does Active Record create for you?
 
-Of the methods in the deliverables, Active Record creates Student#grade_level and Student.all.
+Of the methods in the deliverables, Active Record creates Student#grade_level, Student.all, Student#teacher, and Teacher#students.
 
 Which method(s) did you have to create yourself? Why?
 
@@ -12,6 +12,13 @@ Which method(s) did you have to create yourself? Why?
 
 - Teacher#tenure uses the AR-provided Teacher#years_of_experience but I implemented the logic to check if it was > 5 and return true or false accordingly.
 
+
+# Deliverables 1 part 2
+
+Add these deliverables:
+- A Student belongs to a Teacher
+- Student#teacher should return the teacher that student belongs to
+- Teacher#students should return a list of all the students that belong to this teacher (edited) 
 
 # Deliverables 1
 
