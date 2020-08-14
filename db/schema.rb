@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 6) do
+ActiveRecord::Schema.define(version: 7) do
+
+  create_table "exam_results", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "teacher_id"
+    t.string "subject"
+    t.float "result"
+    t.float "percentile"
+    t.float "normalized_distribution_result"
+    t.float "four_point_scale_result"
+  end
 
   create_table "grade_levels", force: :cascade do |t|
     t.integer "student_id"

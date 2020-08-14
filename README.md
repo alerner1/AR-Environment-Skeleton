@@ -41,6 +41,30 @@ Which method(s) did you have to create yourself? Why?
 
 - Teacher#tenure uses the AR-provided Teacher#years_of_experience but I implemented the logic to check if it was > 5 and return true or false accordingly.
 
+# Deliverables part 4
+
+New relationship: Exam Results/Student/Teacher
+
+- a student has many exam_results (calling them grades gets confusing because there are also grade_levels) # done
+- an exam_result has one student # done
+- a teacher has many exam_results # done
+- an exam_result has one teacher # done
+
+ExamResult class
+
+    - belongs to student # done
+    - belongs to teacher # done
+
+    - additional attributes: subject, result, (optional because it might be too hard:) percentile # done done done
+
+    - class methods: get average of all results, get standard deviation of all results # done, done
+
+    - (optional because it might be too hard:) class method: create a bell curve and reassign the results accordingly 
+
+    - instance methods: check if result is a pass, translate result to 4.0 grade scale # done, done
+
+
+
 # Deliverables part 3
 
 - A Student has many Teachers through GradeLevel
