@@ -45,23 +45,23 @@ Which method(s) did you have to create yourself? Why?
 
 New relationship: Exam Results/Student/Teacher
 
-- a student has many exam_results (calling them grades gets confusing because there are also grade_levels) # done
-- an exam_result has one student # done
-- a teacher has many exam_results # done
-- an exam_result has one teacher # done
+- a student has many exam_results (calling them grades gets confusing because there are also grade_levels) # done, works
+- an exam_result has one student # done, works
+- a teacher has many exam_results # done, works
+- an exam_result has one teacher # done, works
 
 ExamResult class
 
-    - belongs to student # done
-    - belongs to teacher # done
+    - belongs to student # done, works
+    - belongs to teacher # done, works
 
-    - additional attributes: subject, result, (optional because it might be too hard:) percentile # done done done
+    - additional attributes: subject, result, (optional because it might be too hard:) percentile # done done done, works
 
-    - class methods: get average of all results, get standard deviation of all results # done, done
+    - class methods: get average of all results, get standard deviation of all results # done, done, works
 
-    - (optional because it might be too hard:) class method: create a bell curve and reassign the results accordingly 
+    - (optional because it might be too hard:) class method: create a bell curve and reassign the results accordingly # done, works
 
-    - instance methods: check if result is a pass, translate result to 4.0 grade scale # done, done
+    - instance methods: check if result is a pass, translate result to 4.0 grade scale # done, done, works
 
 
 
@@ -76,7 +76,7 @@ ExamResult class
 Add these deliverables:
 - A Student belongs to a Teacher
 - Student#teacher should return the teacher that student belongs to
-- Teacher#students should return a list of all the students that belong to this teacher (edited) 
+- Teacher#students should return a list of all the students that belong to this teacher 
 
 # Deliverables 1
 
